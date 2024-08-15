@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.*;
 
+/// Класс для выволнения функций в программа
 public class Controller {
 
     public void run() throws IOException, NumberYearException, NumberMonthException, NumberDayException {
@@ -28,6 +29,7 @@ public class Controller {
                 System.out.println("Выход из программы!");
                 break;
             }
+            /// Добавляем новое животное
             if (command.equals("ADD")) {
                 getNewIteration = true;
                 Function_Animal animal = new Function_Animal();
@@ -63,6 +65,7 @@ public class Controller {
                 catch (NumberFormatException ignored) {
                 }
             }
+            /// Показываем команды конкрентного животного
             if (command.equals("SHOW")) {
                 getNewIteration = true;
                 Scanner in1 = new Scanner(System.in);
@@ -72,6 +75,7 @@ public class Controller {
                     reestr.list_command(name);
                 }
             }
+            /// Получаем общий список всех животных
             if (command.equals("LIST")) {
                 getNewIteration = true;
                 if(list.isEmpty()){
@@ -84,9 +88,10 @@ public class Controller {
                     }
                 }
             }
+            /// Обучаем животное новым навыкам
             if (command.equals("TEACH")) {
                 getNewIteration = true;
-                int count = 0;
+                int count = 0; /// Счетчик для контроля наличия живтоного нужного типа
                 Scanner in1 = new Scanner(System.in);
                 System.out.println("Введите тип животного ");
                 String type = in1.nextLine().toUpperCase();
@@ -105,10 +110,12 @@ public class Controller {
                     System.out.println("Нет такого типа животного");
                 }
             }
+            /// Получаем количество животных
             if (command.equals("COUNT")) {
                 getNewIteration = true;
                 System.out.println("Общее количество животных - " + total);
             }
+            /// Получаем список животных по году рождения
             if (command.equals("BD")) {
                 getNewIteration = true;
                 Scanner in1 = new Scanner(System.in);
@@ -120,11 +127,11 @@ public class Controller {
                     reestr.list_BD(year);
                     count = count + reestr.list_BD_count(year);
                 }
+                /// Получаем вывод, если нет животного нужного года
                 if(count == 0){
                     System.out.println("пусто");
                 }
             }
-
         }
     }
 }

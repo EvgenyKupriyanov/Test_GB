@@ -3,10 +3,10 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.time.Year;
 
-
+/// Класс по работе с животным
 class Function_Animal implements iAnimal {
 
-
+    /// Создаем живтоное
     @Override
     public Animal add_animal() throws NumberYearException, NumberMonthException, NumberDayException, NumberFormatException {
         Scanner in = new Scanner(System.in);
@@ -45,6 +45,7 @@ class Function_Animal implements iAnimal {
 
     }
 
+    /// Классы для контроля ввода даты рождения
     public static void controlDay(String day) throws NumberDayException {
         try {
             Integer.parseInt(day);
