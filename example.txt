@@ -1,3 +1,0 @@
-Animal{type - 'dog', name - 'joe', BD - Tue Sep 26 00:00:00 MSK 2023, command - [stay]}
-Animal{type - 'сфе', name - 'fd', BD - Sun Mar 10 00:00:00 MSK 2019, command - [f]}
-cat bar Thu May 14 00:00:00 MSK 2020 [run]
