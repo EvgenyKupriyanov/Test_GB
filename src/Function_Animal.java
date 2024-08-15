@@ -6,7 +6,7 @@ import java.time.Year;
 /// Класс по работе с животным
 class Function_Animal implements iAnimal {
 
-    /// Создаем живтоное
+    /// Создаем животное
     @Override
     public Animal add_animal() throws NumberYearException, NumberMonthException, NumberDayException, NumberFormatException {
         Scanner in = new Scanner(System.in);
